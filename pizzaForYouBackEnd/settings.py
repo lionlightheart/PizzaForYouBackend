@@ -75,10 +75,15 @@ WSGI_APPLICATION = 'pizzaForYouBackEnd.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mypizzadb',
+        'USER': 'root',
+        'PASSWORD': '09423MyPizzaDB23423',
+        'HOST': 'db',
+        'PORT': '3306',
     }
 }
+
 
 
 # Password validation
