@@ -9,4 +9,5 @@ urlpatterns = [
 ]
 
 if not settings.DEBUG:
-    urlpatterns[0] = path('admin/', lambda request: HttpResponseForbidden("Forbidden: admin access disabled in production!"))
+    urlpatterns[0] = path('admin/', lambda request: 
+                          HttpResponseForbidden("Forbidden: admin access disabled in production!"))
