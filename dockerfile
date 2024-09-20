@@ -2,11 +2,9 @@ FROM python:3.11.9
 
 WORKDIR /app
 
-RUN pip install pipenv
+COPY requirements.txt .
 
-COPY Pipfile Pipfile.lock ./
-
-RUN pipenv install --deploy --ignore-pipfile
+RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
